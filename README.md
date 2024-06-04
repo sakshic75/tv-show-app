@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# Project Description 
+This is a webpage which shows the Currently TV shows Scheduled in the US 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+When a particular show is selected , more info can be seen at  the right side of the page.
+
 
 ## Available Scripts
 
