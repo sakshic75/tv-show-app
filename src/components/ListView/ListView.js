@@ -6,7 +6,7 @@ import DetailView from '../DetailView/DetailView';
 import DefaultView from '../DetailView/DefaultView';
 
 const ListView = () => {
-    const IMAGE_NOT_FOUND= "notfound.png";
+    const IMAGE_NOT_FOUND = "notfound.png";
     const [shows, setShows] = useState([]);
     const [showId, setShowId] = useState(0);
     const [episode, setEpisode] = useState(0);
@@ -45,11 +45,10 @@ const ListView = () => {
                 <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
                     <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
                         <a href="/" className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                        <h6 className="align-items-center"> <strong>Currently streaming in US on {new Date().toISOString().split('T')[0]}  </strong></h6>
+                            <h6 className="align-items-center"> <strong>Currently streaming in US on {new Date().toISOString().split('T')[0]}  </strong></h6>
                         </a>
-
-                         {/* Pagination */}
-                         <nav>
+                        {/* Pagination */}
+                        <nav>
                             <ul className="pagination justify-content-center">
                                 <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
                                     <button onClick={prevPage} className="page-link">Previous</button>
@@ -63,22 +62,18 @@ const ListView = () => {
                             {shows.slice(indexOfFirstShow, indexOfLastShow).map((showItem, index) => {
                                 const showEmbedded = showItem._embedded.show;
                                 const id = showEmbedded.id;
-    
                                 return (
                                     <li key={showEmbedded.id} className="nav-item fixed">
-                                        <a className="nav-link d-flex flex-column align-items-center " style={{ color: 'white' , width:"100%" }} onClick={() => { setShowId(id); setEpisode(showItem.number) }} >
-                                            {showEmbedded.image && <img src={showEmbedded.image.medium} style={{ width:"50ox",height:"70px" }} className="show-image mb-2" alt={showEmbedded.name} />}
-                                            {!showEmbedded.image && <img src={IMAGE_NOT_FOUND} style={{ width:"50ox",height:"70px" }}  className="show-image mb-2" alt={showEmbedded.name} />}
-                                    
-                                            <span>{showEmbedded.name+" "} <span>S{showItem.season+" "}E{showItem.number} </span></span>
-                                        
+                                        <a className="nav-link d-flex flex-column align-items-center " style={{ color: 'white', width: "100%" }} onClick={() => { setShowId(id); setEpisode(showItem.number) }} >
+                                            {showEmbedded.image && <img src={showEmbedded.image.medium} style={{ width: "50ox", height: "70px" }} className="show-image mb-2" alt={showEmbedded.name} />}
+                                            {!showEmbedded.image && <img src={IMAGE_NOT_FOUND} style={{ width: "50ox", height: "70px" }} className="show-image mb-2" alt={showEmbedded.name} />}
+                                            <span>{showEmbedded.name + " "} <span>S{showItem.season + " "}E{showItem.number} </span></span>
                                         </a>
                                     </li>
                                 );
                             })}
                         </ul>
                         <hr />
-                       
                     </div>
                 </div>
                 <div className="col py-3">

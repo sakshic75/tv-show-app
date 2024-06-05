@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-
 const Header = () => {
     return (
         <div className="page-header bg-dark text-white p-2 d-flex align-items-center">
@@ -18,5 +16,4 @@ const Header = () => {
         </div>
     )
 };
-
 export default Header;

@@ -32,12 +32,10 @@ const ShowView = (props) => {
                             <strong>Summary : </strong><h6 className="card-text" dangerouslySetInnerHTML={{ __html: show.summary }}></h6>
                             {show.language && <h6 className="card-text">   <strong>Language : </strong>{show.language}</h6>}
                             {show.type && <h6 className="card-text">   <strong>Show Type : </strong>{show.type}</h6>}
-
                         </div>
                     </div>
                     <div className="col-md-6">
                         <div className="card bg-light p-4 shadow-sm" style={{ width: "100%", height: "500px" }}>
-
                             {show.genres && show.genres.length > 0 &&
                                 <div className="mt-3">
                                     <strong>Genres :  {show.genres.map((genre, index) => (
@@ -59,11 +57,8 @@ const ShowView = (props) => {
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
-
     );
 };
 

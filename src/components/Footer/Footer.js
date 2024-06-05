@@ -1,5 +1,4 @@
 import React from 'react';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Footer = () => {
@@ -12,8 +11,6 @@ const Footer = () => {
             </div>
             {/* Copyright */}
         </footer>
-
     );
 };
-
 export default Footer;

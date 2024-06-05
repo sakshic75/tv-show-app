@@ -39,7 +39,6 @@ const EpisodeView = (props) => {
       setCurrentEpisode(episodes[newIndex]);
     }
   };
-
   return (
     <div className="container mt-5">
       <h3 className="text-center text-primary">Episodes</h3>
@@ -53,8 +52,6 @@ const EpisodeView = (props) => {
           <div className="card-body">
             <div className="row">
               <div className="col">
-
-
                 {currentEpisode.airdate && <p><strong className="text-primary">Air Date :</strong> {currentEpisode.airdate}</p>}
                 {currentEpisode.airtime && <p><strong className="text-primary">Air Time :</strong> {currentEpisode.airtime}</p>}
                 {currentEpisode.runtime && <p><strong className="text-primary">Run time :</strong> {currentEpisode.runtime + " minutes"}</p>}
